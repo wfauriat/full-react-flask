@@ -1,30 +1,49 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+--- Dependencies & Development Artifacts ---
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+1. Node/Frontend Dependencies
 
-# testing
-/coverage
+Ignores all 'node_modules' folders, regardless of location (root or nested in my-web-app)
 
-# production
+node_modules
+
+Ignore package manager lock files
+
+package-lock.json
+yarn.lock
+
+2. Python Virtual Environment
+
+Ignores common Python virtual environment folders
+
+/venv
+/env
+.venv
+
+3. Build & Cache Output
+
+Ignore Create React App build output
+
 /build
+/dist
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+Python cache files
 
 pycache/
 *.pyc
 *.pyo
-*.pyd
+
+--- Database & Local Data ---
+
+CRITICAL: Ignore the SQLite database file
 
 todo.db
+
+Ignore Flask session data/instance folder
+
+instance/
+
+--- IDE & System Files ---
+
+.DS_Store
+.vscode
+npm-debug.log*
